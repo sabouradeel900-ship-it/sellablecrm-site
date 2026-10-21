@@ -8,14 +8,14 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sellablecrm.com/">
 <meta property="og:title" content="SellableCRM">
-<meta property="og:description" content="White-label lead follow-up for marketing agencies. Your clients get the systems. You get the credit.">
+<meta property="og:description" content="White-label lead-to-close for marketing agencies. Your clients get the systems. You get the credit.">
 <meta property="og:image" content="https://sellablecrm.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="1200">
 <meta name="twitter:card" content="summary">
 <meta name="theme-color" content="#F2F2F3">
 <title>SellableCRM</title>
-<meta name="description" content="White-label lead follow-up for marketing agencies. Your clients get the systems. You get the credit.">
+<meta name="description" content="White-label lead-to-close for marketing agencies. Your clients get the systems. You get the credit.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
@@ -223,18 +223,21 @@ p { margin: 0; }
 .float b { display: block; font-weight: 600; margin: 6px 0 2px; }
 .float p { color: var(--ink-2); font-size: 12.5px; line-height: 1.45; }
 .float .dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; background: var(--good); margin-right: 6px; }
-.float.a { left: -38px; top: 120px; transform: rotate(-4deg); }
-.float.b { right: -34px; top: 40px; transform: rotate(3deg); animation-delay: -3s; }
+/* The cards sit in the gutters beside the frame, so they never hide the example figures */
+.float { width: 210px; }
+.float.a { left: -128px; top: 150px; transform: rotate(-4deg); }
+.float.b { right: -128px; top: 112px; transform: rotate(3deg); animation-delay: -3s; }
+@media (max-width: 1399px) { .float.a { display: none; } .float.b { right: 12px; top: -96px; } }
 @keyframes bob { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
-@media (max-width: 1240px) { .float.a { left: 12px; top: auto; bottom: 30px; } .float.b { right: 12px; top: -40px; } }
-@media (max-width: 760px) { .float { display: none; } }
+@media (max-width: 900px) { .float { display: none; } }
 
 .example-note { font-size: 12px; color: var(--ink-3); text-align: center; padding: 14px 0 0; }
 
 /* ---------- Statement ---------- */
-.statement { padding: 140px 0 120px; text-align: center; }
-.statement h2 { max-width: 22ch; margin-inline: auto; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.18; }
-.statement h2 .soft { color: var(--ink-3); }
+.statement { padding: 128px 0 120px; text-align: center; }
+.statement h2 { margin-inline: auto; font-size: clamp(30px, 3.6vw, 44px); line-height: 1.18; }
+.statement h2 .soft { display: block; max-width: 28ch; margin: 18px auto 0; color: var(--ink-3); text-wrap: balance; }
+.statement h2 b { font-weight: 600; }
 .trio { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 860px; margin: 56px auto 0; padding-top: 40px; border-top: 1px solid var(--line); text-align: left; }
 .trio div { display: flex; gap: 14px; align-items: center; }
 .trio i { flex: none; width: 44px; height: 44px; border-radius: 12px; background: var(--iri); display: grid; place-items: center; }
@@ -246,6 +249,23 @@ p { margin: 0; }
 .trio.five { grid-template-columns: repeat(5, 1fr); gap: 20px; max-width: 1080px; }
 .trio.five div { flex-direction: column; align-items: flex-start; gap: 12px; }
 .trio-more { max-width: 60ch; margin: 36px auto 0; font-size: 16px; color: var(--ink-2); text-wrap: balance; }
+/* The five promises as cards, then the included CRM as one dark strip */
+.wins { display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; margin: 64px auto 0; text-align: left; }
+.wins > div { background: var(--ground); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 16px; transition: transform .5s var(--spring); }
+.wins > div:hover { transform: translateY(-4px); }
+.wins i { width: 44px; height: 44px; border-radius: 12px; background: var(--iri); display: grid; place-items: center; }
+.wins i svg { width: 20px; height: 20px; color: var(--lime-ink); }
+.wins b { display: block; min-height: 2.5em; font: 500 19px/1.25 var(--display); letter-spacing: -.015em; }
+.wins small { display: block; margin-top: 6px; font-size: 14px; line-height: 1.45; color: var(--ink-2); }
+.incl-strip { margin-top: 12px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 8px 10px; background: var(--night); color: var(--on-night); border-radius: 22px; padding: 18px 22px; }
+.incl-strip b { font: 500 18px var(--display); letter-spacing: -.01em; margin-right: 8px; }
+.incl-strip span { background: var(--night-2); border: 1px solid var(--night-line); border-radius: 999px; padding: 7px 13px; font-size: 14px; color: var(--on-night-2); }
+.incl-strip em { font-style: normal; background: var(--iri); color: var(--lime-ink); border-radius: 999px; padding: 7px 13px; font-size: 14px; font-weight: 600; }
+@media (max-width: 1000px) { .wins { grid-template-columns: repeat(2, 1fr); } .wins b { min-height: 0; } .wins > div:last-child { grid-column: 1 / -1; } }
+@media (max-width: 600px) { .wins { grid-template-columns: 1fr; } }
+/* Bold for the few words a visitor must not miss */
+.mark { font-weight: 600; color: var(--ink); }
+.night .mark { color: var(--on-night); }
 @media (max-width: 960px) { .trio.five { grid-template-columns: repeat(3, 1fr); max-width: 720px; } }
 @media (max-width: 600px) { .trio.five { grid-template-columns: 1fr; max-width: 340px; } .trio.five div { flex-direction: row; align-items: center; } }
 
@@ -263,6 +283,7 @@ p { margin: 0; }
 .stack-card:nth-child(even) .sc-copy { order: 2; }
 .sc-copy { padding: 44px; display: flex; flex-direction: column; gap: 20px; }
 .sc-copy p { color: var(--ink-2); max-width: 40ch; }
+.sc-copy h2 { font-size: clamp(34px, 3.6vw, 48px); }
 .sc-foot { margin-top: auto; display: flex; gap: 10px; align-items: center; font-size: 14px; color: var(--ink-2); }
 .sc-foot svg { flex: none; width: 20px; height: 20px; color: var(--good); }
 .sc-art { position: relative; display: grid; place-items: center; padding: 40px; overflow: hidden; }
@@ -338,7 +359,17 @@ p { margin: 0; }
 .tile.full { grid-column: 1 / -1; min-height: 0; }
 .tile .tools { display: flex; flex-wrap: wrap; gap: 6px; }
 .tile .tools .chip { background: var(--night-3); color: var(--on-night); }
-.tile .fine-n { font-size: 13px; color: var(--on-night-3); }
+/* Free add-ons tile: seven switches, some flipping on as it comes into view */
+.addon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.addon-grid .ad { display: flex; align-items: center; gap: 12px; background: var(--night-3); border-radius: 12px; padding: 11px 14px; font-size: 14px; color: var(--on-night); }
+.addon-grid .ad.ai { grid-column: 1 / -1; }
+.addon-grid .ad em { margin-left: auto; font: 500 11px var(--mono); font-style: normal; color: var(--lime-ink); background: var(--iri); padding: 4px 9px; border-radius: 999px; }
+.addon-grid .sw { flex: none; position: relative; width: 34px; height: 20px; border-radius: 999px; background: var(--night-2); transition: background .35s; transition-delay: calc(var(--i, 0) * 160ms + 300ms); }
+.addon-grid .sw::after { content: ""; position: absolute; left: 3px; top: 3px; width: 14px; height: 14px; border-radius: 50%; background: var(--on-night-3); transition: transform .5s var(--spring), background .35s; transition-delay: inherit; }
+.addon-grid .ad.on .sw { background: var(--iri); }
+.addon-grid .ad.on .sw::after { transform: translateX(14px); background: var(--ink); }
+.anim .tile.addons:not(.in) .ad.on .sw { background: var(--night-2); }
+.anim .tile.addons:not(.in) .ad.on .sw::after { transform: none; background: var(--on-night-3); }
 .bento-more { display: flex; justify-content: center; margin-top: 40px; }
 @media (max-width: 960px) { .bento { grid-template-columns: 1fr 1fr; } .tile.wide-md { grid-column: span 2; } }
 @media (max-width: 640px) { .bento { grid-template-columns: 1fr; } .tile.wide, .tile.wide-md { grid-column: auto; } }
@@ -450,13 +481,13 @@ p { margin: 0; }
 .side li { display: flex; gap: 12px; align-items: flex-start; padding: 12px 0; border-top: 1px solid rgba(10, 10, 11, .12); font-size: 15px; }
 .side li:first-child { border-top: 0; }
 .side li svg { flex: none; width: 18px; height: 18px; margin-top: 3px; }
-.side.us ul { columns: 2; column-gap: 28px; display: block; }
-.side.us li { break-inside: avoid; }
+.side.us ul { display: grid; grid-template-columns: 1fr 1fr; column-gap: 28px; }
+.side.us li:nth-child(2) { border-top: 0; }
 .side .big { font: 500 64px/1 var(--display); letter-spacing: -.04em; margin-top: auto; }
 .side .big small { display: block; font: 400 14px/1.4 var(--body); letter-spacing: 0; margin-top: 8px; opacity: .75; }
-@media (max-width: 860px) { .split { grid-template-columns: 1fr; } .side.us ul { columns: 1; } .side { padding: 28px; } }
+@media (max-width: 860px) { .split { grid-template-columns: 1fr; } .side.us ul { grid-template-columns: 1fr; } .side.us li:nth-child(2) { border-top: 1px solid rgba(10, 10, 11, .12); } .side { padding: 28px; } }
 
-.promises { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 16px; }
+.promises { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
 .promise { border: 1px solid var(--line); border-radius: 22px; padding: 26px; display: grid; gap: 10px; align-content: start; }
 .promise i { width: 40px; height: 40px; border-radius: 11px; background: var(--ink); color: var(--lime); display: grid; place-items: center; }
 .promise i svg { width: 18px; height: 18px; }
@@ -464,42 +495,73 @@ p { margin: 0; }
 .promise p { color: var(--ink-2); font-size: 14.5px; }
 @media (max-width: 860px) { .promises { grid-template-columns: 1fr; } }
 
-/* ---------- Pricing ---------- */
+/* ---------- Team section (homepage and What's included) ---------- */
+.wi-head { display: grid; grid-template-columns: 1.15fr 1fr; gap: 48px; align-items: end; margin-bottom: 64px; }
+.wi-head h2 { max-width: 15ch; }
+.wi-head p { font-size: 18px; color: var(--ink-2); max-width: 40ch; justify-self: end; }
+.night .wi-head p { color: var(--on-night-2); }
+.team { display: grid; grid-template-columns: 1.25fr 1fr; gap: 48px; align-items: center; }
+.team-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 28px 32px; }
+.team-list li { display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: start; }
+.team-list i { width: 44px; height: 44px; border-radius: 13px; background: var(--iri); color: var(--lime-ink); display: grid; place-items: center; }
+.team-list i svg { width: 19px; height: 19px; }
+.team-list b { display: block; font: 500 20px/1.25 var(--display); letter-spacing: -.015em; margin-bottom: 4px; }
+.team-list span { font-size: 15px; color: var(--ink-2); }
+.ticket { margin: 0; background: var(--ground); border-radius: 26px; padding: 22px; display: grid; gap: 12px; }
+.ticket-head { display: flex; justify-content: space-between; align-items: center; padding: 0 4px 6px; }
+.ticket-head b { display: block; font: 500 19px/1.2 var(--display); letter-spacing: -.015em; }
+.ticket-head small { font-size: 13px; color: var(--ink-3); }
+.tmsg { border-radius: 18px; padding: 14px 16px; display: grid; gap: 6px; max-width: 88%; }
+.tmsg small { font-size: 12px; color: var(--ink-3); }
+.tmsg p { font-size: 15px; line-height: 1.45; }
+.tmsg.you { background: var(--paper); }
+.tmsg.ours { background: var(--ink); color: var(--on-night); justify-self: end; }
+.tmsg.ours small { color: var(--lime); }
+.ticket figcaption { font-size: 12px; color: var(--ink-3); text-align: center; }
+.yourpart { margin-top: 56px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; background: var(--iri); color: var(--lime-ink); border-radius: 22px; padding: 18px 20px; }
+.yourpart b { font: 500 20px var(--display); letter-spacing: -.015em; margin-right: 10px; }
+.yourpart span { background: rgba(255, 255, 255, .7); border-radius: 999px; padding: 8px 14px; font-size: 14.5px; font-weight: 500; }
+@media (max-width: 900px) { .wi-head, .team { grid-template-columns: 1fr; } .wi-head { gap: 16px; margin-bottom: 40px; } .wi-head p { justify-self: start; } }
+@media (max-width: 600px) { .team-list { grid-template-columns: 1fr; } }
+
+/* ---------- Pricing: the price on the left, everything it includes on the right ---------- */
 .pricing { padding: 40px 0 140px; }
 .hl { background: var(--iri); padding: 0 .14em; border-radius: .18em; box-decoration-break: clone; -webkit-box-decoration-break: clone; }
 .price-wrap { background: var(--ground); border-radius: 32px; padding: 12px; }
 .price-grid { display: grid; grid-template-columns: 1fr 1.25fr; gap: 12px; }
-.price-card, .calc { background: var(--paper); border-radius: 24px; padding: 32px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
-.price-card .amt { font: 500 64px/1 var(--display); letter-spacing: -.045em; font-variant-numeric: tabular-nums; }
+.price-card { background: var(--paper); border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 18px; min-width: 0; }
+.price-card .amt { font: 500 72px/1 var(--display); letter-spacing: -.045em; font-variant-numeric: tabular-nums; }
 .price-card .amt span { font-size: 18px; letter-spacing: 0; color: var(--ink-3); font-family: var(--body); font-weight: 400; }
+.price-card .setup { font-size: 16px; color: var(--ink-2); margin-top: -6px; }
+.price-card .setup b { font-weight: 600; color: var(--ink); }
 .price-card ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0; }
-.price-card li { display: flex; gap: 10px; padding: 10px 0; border-top: 1px solid var(--line); font-size: 14.5px; }
+.price-card li { display: flex; gap: 10px; padding: 11px 0; border-top: 1px solid var(--line); font-size: 15px; }
 .price-card li:first-child { border-top: 0; }
-.price-card li svg { width: 16px; height: 16px; flex: none; margin-top: 4px; color: var(--ink-3); }
+.price-card li svg { width: 16px; height: 16px; flex: none; margin-top: 4px; color: var(--good); }
 .fine { font-size: 13px; color: var(--ink-3); }
-.calc h3 { font-size: 24px; }
-.slider { display: grid; gap: 10px; }
-.slider label { display: flex; justify-content: space-between; font-size: 14px; color: var(--ink-2); }
-.slider label output { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
-/* Comparison rows: same label and track look as the old sliders, but static */
-.slider .row-lbl { display: flex; justify-content: space-between; font-size: 14px; color: var(--ink-2); }
-.slider .row-lbl output { font-weight: 600; color: var(--ink); font-variant-numeric: tabular-nums; }
-.slider .bar { height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--ink) var(--p), var(--ground) var(--p)); }
-input[type=range] { -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--ink) var(--p, 50%), var(--ground) var(--p, 50%)); }
-input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; width: 24px; height: 24px; border-radius: 8px; background: var(--iri); border: 2px solid var(--ink); cursor: grab; }
-input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 8px; background: var(--iri); border: 2px solid var(--ink); cursor: grab; }
-.sum { display: grid; gap: 0; margin-top: 6px; border-top: 1px solid var(--line); }
-.sum div { display: flex; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--line); font-size: 14.5px; font-variant-numeric: tabular-nums; }
-.sum div span:first-child { color: var(--ink-2); }
-.sum .net { border-bottom: 0; background: var(--ink); color: var(--on-night); border-radius: 14px; padding: 14px 16px; margin-top: 12px; align-items: center; }
-.sum .net span:first-child { color: var(--on-night-2); }
-.sum .net b { font: 500 26px/1 var(--display); background: var(--iri); -webkit-background-clip: text; background-clip: text; color: transparent; }
-.verdict { font-size: 14px; color: var(--ink-2); min-height: 2.9em; }
-.custom-row { display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; background: var(--paper); border-radius: 24px; padding: 26px 32px; margin-top: 12px; }
-.custom-row p { color: var(--ink-2); max-width: 60ch; font-size: 14.5px; }
-.custom-row b { display: block; color: var(--ink); font: 500 20px/1.3 var(--display); margin-bottom: 4px; }
-@media (max-width: 860px) { .price-grid { grid-template-columns: 1fr; } .price-card, .calc { padding: 24px; } .custom-row { padding: 22px 24px; } }
-@media (max-width: 600px) { .sum .net { flex-direction: column; align-items: flex-start; gap: 6px; } .sum .net b { font-size: 24px; } }
+
+.incl { position: relative; overflow: hidden; background: var(--night); color: var(--on-night); border-radius: 24px; padding: 36px; display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.incl::before { content: ""; position: absolute; width: 520px; height: 520px; right: -200px; top: -240px; border-radius: 50%; background: radial-gradient(closest-side, rgba(201, 198, 255, .22), transparent); pointer-events: none; }
+.incl > * { position: relative; }
+.incl h3 { font-size: 30px; max-width: 16ch; }
+.incl-counts { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+.incl-counts a { background: var(--night-2); border: 1px solid var(--night-line); border-radius: 18px; padding: 16px 16px 14px; display: grid; gap: 6px; transition: transform .5s var(--spring), border-color .3s; }
+.incl-counts a:hover { transform: translateY(-3px); border-color: var(--iri-glow); }
+.incl-counts b { font: 500 52px/1 var(--display); letter-spacing: -.04em; background: var(--iri); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.incl-counts span { font-size: 13.5px; line-height: 1.3; color: var(--on-night-2); max-width: 14ch; }
+.incl h4 { margin: 4px 0 -6px; font: 500 13px var(--body); color: var(--on-night-3); }
+.incl-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+.incl-list li { display: flex; gap: 11px; align-items: center; font-size: 15px; }
+.incl-list i { flex: none; width: 24px; height: 24px; border-radius: 8px; background: var(--iri); color: var(--lime-ink); display: grid; place-items: center; }
+.incl-list i svg { width: 13px; height: 13px; }
+.anim .incl-list li { opacity: 0; transform: translateX(-10px); transition: opacity .6s var(--ease), transform .7s var(--spring); transition-delay: calc(var(--i) * 70ms + 250ms); }
+.anim .price-wrap.in .incl-list li { opacity: 1; transform: none; }
+.incl-link { margin-top: auto; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; color: var(--lime); font-weight: 500; font-size: 15px; }
+.incl-link svg { width: 16px; height: 16px; transition: transform .4s var(--spring); }
+.incl-link:hover svg { transform: translateX(4px); }
+@media (max-width: 860px) { .price-grid { grid-template-columns: 1fr; } .price-card, .incl { padding: 24px; } }
+@media (max-width: 600px) { .incl-list { grid-template-columns: 1fr; } .incl-counts b { font-size: 40px; } }
+@media (prefers-reduced-motion: reduce) { .anim .incl-list li { opacity: 1; transform: none; } }
 
 .tbd { background: var(--tbd); color: var(--ink); border-radius: 5px; padding: 0 5px; font-size: .92em; white-space: nowrap; }
 
@@ -530,46 +592,6 @@ input[type=range]::-moz-range-thumb { width: 22px; height: 22px; border-radius: 
   .qa .ans { padding: 0 18px 18px; }
 }
 
-/* ---------- "What's included" page (sellablecrm-whats-included.html shares this stylesheet) ---------- */
-.page-hero { background: linear-gradient(180deg, var(--ground) 0%, var(--ground) 70%, var(--paper) 100%); padding: 150px 0 40px; }
-.page-hero .hero-copy { gap: 22px; }
-.page-hero h1 { font-size: clamp(40px, 6vw, 72px); max-width: 16ch; }
-.page-hero .lead { max-width: 52ch; }
-.wi-sec { padding: 96px 0 0; }
-.page-hero + .wi-sec { padding-top: 48px; }
-.wi-sec .sec-head { margin-bottom: 40px; }
-.wi-sec .sec-head .lead { max-width: 56ch; }
-.wi-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px; }
-.wi-card { background: var(--ground); border-radius: 22px; padding: 24px; display: grid; gap: 8px; align-content: start; }
-.wi-card h3 { font-size: 22px; }
-.wi-card p { color: var(--ink-2); font-size: 14.5px; }
-.wi-card .when { font: 500 11px/1.5 var(--mono); text-transform: uppercase; letter-spacing: .06em; color: var(--ink-3); }
-.wi-card.accent { background: var(--iri); color: var(--lime-ink); }
-.wi-card.accent p, .wi-card.accent .when { color: var(--lime-ink); }
-.wi-note { text-align: center; font-size: 14px; color: var(--ink-3); max-width: 64ch; margin: 24px auto 0; }
-.wi-night { border-radius: 32px; padding: 64px 48px; }
-.wi-night .sec-head { margin-bottom: 36px; }
-.wi-table { display: grid; max-width: 860px; margin: 0 auto; border-top: 1px solid var(--night-line); }
-.wi-table div { display: grid; grid-template-columns: 200px 1fr; gap: 20px; padding: 16px 0; border-bottom: 1px solid var(--night-line); font-size: 15px; }
-.wi-table b { font: 500 19px/1.3 var(--display); letter-spacing: -.015em; }
-.wi-table span { color: var(--on-night-2); }
-.wi-list { list-style: none; margin: 0 auto; padding: 0; max-width: 860px; display: grid; gap: 0; }
-.wi-list li { display: flex; gap: 12px; align-items: flex-start; padding: 14px 0; border-top: 1px solid var(--line); font-size: 15px; color: var(--ink-2); }
-.wi-list li:first-child { border-top: 0; }
-.wi-list li b { color: var(--ink); font-weight: 500; }
-.wi-list li svg { flex: none; width: 18px; height: 18px; margin-top: 3px; color: var(--ink-3); }
-.night .wi-list { margin-top: 32px; }
-.night .wi-list li { border-color: var(--night-line); color: var(--on-night-2); }
-.night .wi-list li b { color: var(--on-night); }
-.night .wi-list li svg { color: var(--lime); }
-.wi-sec .split { margin-top: 0; }
-.wi-final { padding-top: 96px; }
-@media (max-width: 760px) {
-  .wi-sec { padding-top: 72px; }
-  .wi-night { padding: 40px 20px; border-radius: 28px; }
-  .wi-table div { grid-template-columns: 1fr; gap: 4px; }
-}
-
 /* ---------- Final CTA + footer ---------- */
 .final { padding: 0 0 24px; }
 .final-box { border-radius: 36px; padding: 120px 32px; text-align: center; display: grid; justify-items: center; gap: 22px; position: relative; overflow: hidden; }
@@ -587,6 +609,29 @@ footer { padding: 56px 0 40px; }
 .foot ul a:hover { text-decoration: underline; }
 .legal { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin-top: 48px; padding-top: 24px; border-top: 1px solid var(--line); font-size: 13px; color: var(--ink-3); }
 @media (max-width: 760px) { .foot { grid-template-columns: 1fr 1fr; } .foot > :first-child { grid-column: 1 / -1; } }
+
+/* Call-to-action row between sections */
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; align-items: center; margin-top: 56px; }
+.stack .cta-row { margin-top: 24px; }
+
+/* ---------- Phone layout ---------- */
+@media (max-width: 600px) {
+  .statement { padding: 96px 0 88px; }
+  .statement h2 { font-size: 28px; text-wrap: balance; }
+  .statement h2 br { display: none; }
+  .statement h2 .soft { margin-top: 14px; }
+  .wins { margin-top: 40px; gap: 10px; }
+  .wins > div { flex-direction: row; align-items: flex-start; gap: 14px; padding: 18px; }
+  .wins i { flex: none; }
+  .wins b { min-height: 0; }
+  .incl-strip { justify-content: flex-start; padding: 18px; }
+  .incl-strip b { width: 100%; margin: 0 0 4px; text-align: left; }
+  .addon-grid { grid-template-columns: 1fr; }
+  .addon-grid .ad em { white-space: nowrap; }
+  .incl-counts { grid-template-columns: 1fr; }
+  .incl-counts a { grid-template-columns: 52px 1fr; align-items: center; gap: 12px; padding: 12px 16px; }
+  .wi-head { gap: 16px; margin-bottom: 40px; }
+}
 
 /* ---------- Scroll reveal (transform only, so content is always readable) ---------- */
 .anim .rv { transform: translateY(56px); transition: transform 1.1s var(--spring); transition-delay: var(--d, 0s); }
@@ -616,6 +661,7 @@ footer { padding: 56px 0 40px; }
     <symbol id="phone" viewBox="0 0 20 20"><path d="M6.2 3h-2a1.2 1.2 0 0 0-1.2 1.3C3.6 11 9 16.4 15.7 17a1.2 1.2 0 0 0 1.3-1.2v-2l-3.4-1.4-1.6 1.6a9.5 9.5 0 0 1-4.9-4.9l1.6-1.6z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
     <symbol id="bell" viewBox="0 0 20 20"><path d="M5 13.5V9a5 5 0 0 1 10 0v4.5l1.5 1.5h-13zM8.3 17.2a1.9 1.9 0 0 0 3.4 0" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></symbol>
     <symbol id="pause" viewBox="0 0 20 20"><rect x="5" y="4" width="3.4" height="12" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.7"/><rect x="11.6" y="4" width="3.4" height="12" rx="1.2" fill="none" stroke="currentColor" stroke-width="1.7"/></symbol>
+    <symbol id="chat" viewBox="0 0 20 20"><path d="M4 4.5h12a1.5 1.5 0 0 1 1.5 1.5v7a1.5 1.5 0 0 1-1.5 1.5H9l-4 3v-3H4A1.5 1.5 0 0 1 2.5 13V6A1.5 1.5 0 0 1 4 4.5z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></symbol>
     <symbol id="xmark" viewBox="0 0 20 20"><path d="M5.5 5.5l9 9M14.5 5.5l-9 9" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round"/></symbol>
     <symbol id="star" viewBox="0 0 20 20"><path d="M10 2.5l2.3 4.8 5.2.7-3.8 3.6.9 5.2L10 14.3l-4.6 2.5.9-5.2L2.5 8l5.2-.7z" fill="currentColor"/></symbol>
     <symbol id="logo" viewBox="0 0 28 28"><rect width="28" height="28" rx="8" fill="#0A0A0B"/><path d="M19.5 15.2a5.8 5.8 0 1 1-1.7-5.4" fill="none" stroke="url(#iriG)" stroke-width="2.4" stroke-linecap="round"/><path d="M18.6 5.6v4.6H14" fill="none" stroke="url(#iriG)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
@@ -625,12 +671,12 @@ footer { padding: 56px 0 40px; }
 <nav class="nav" id="nav" aria-label="Main">
   <a class="brand" href="#top" aria-label="SellableCRM home"><span class="logo"><span class="logo-pri"></span><span class="logo-rev"></span></span></a>
   <ul>
-    <li><a href="#included">What's included</a></li>
-    <li><a href="#how">How it works</a></li>
-    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="/whats-included/">What's included</a></li>
+    <li><a href="/how-it-works/">How it works</a></li>
+    <li><a href="/pricing/">Pricing</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a class="btn sm" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0T0GUV3CvMoAlQ0I1aDNFuha23Fiv6uMxIg3J3F5-Jpy4ELao6kHKzNRUMXYg2uUGJciYs9p-S" target="_blank" rel="noopener"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
+  <a class="btn sm" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
 </nav>
 
 <main id="top">
@@ -639,14 +685,14 @@ footer { padding: 56px 0 40px; }
 <header class="hero">
   <div class="wrap">
     <div class="hero-copy">
-      <span class="pill" style="animation: rise 1s var(--spring) both"><i><svg><use href="#bolt"/></svg></i>White-label lead follow-up for your clients</span>
+      <span class="pill" style="animation: rise 1s var(--spring) both"><i><svg><use href="#bolt"/></svg></i>White-label lead-to-close for your clients</span>
       <h1 aria-label="Your clients get the systems. You get the credit.">
         <span class="w" style="--i:0">Your</span> <span class="w" style="--i:1">clients</span> <span class="w" style="--i:2">get</span> <span class="w" style="--i:3">the</span> <span class="w" style="--i:4">systems.</span><br>
         <span class="w" style="--i:5">You</span> <span class="w" style="--i:6">get</span> <span class="w" style="--i:7">the</span> <span class="w iri-text" style="--i:8">credit.</span>
       </h1>
-      <p class="lead">Every lead your clients get is answered in a minute, followed up and booked. Under your brand.</p>
+      <p class="lead">Every lead your clients receive is <span class="mark">answered within a minute</span> and followed up until it closes, all under your brand.</p>
       <div class="hero-ctas">
-        <a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0T0GUV3CvMoAlQ0I1aDNFuha23Fiv6uMxIg3J3F5-Jpy4ELao6kHKzNRUMXYg2uUGJciYs9p-S" target="_blank" rel="noopener"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
+        <a class="btn" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
         <a class="btn ghost" href="#how">See how it works</a>
       </div>
       <label class="brand-try" for="brandInput">See it with your agency's name
@@ -702,16 +748,19 @@ footer { padding: 56px 0 40px; }
 <!-- STATEMENT -->
 <section class="statement">
   <div class="wrap">
-    <h2 class="rv">Your work stops at the enquiry. Your reputation doesn’t. <span class="soft" style="display:block; text-wrap:balance">
-Your leads aren’t bad. They just don’t get the attention they need.</span></h2>
-    <div class="trio five">
-      <div class="rv" style="--d:.0s"><i><svg><use href="#bolt"/></svg></i><span><b>Every lead answered in a minute</b><small>Day or night</small></span></div>
-      <div class="rv" style="--d:.06s"><i><svg><use href="#phone"/></svg></i><span><b>Missed calls get a text back</b><small>So callers don't ring the next company</small></span></div>
-      <div class="rv" style="--d:.12s"><i><svg><use href="#bell"/></svg></i><span><b>Nurture until they reply</b><small>And alerts so no reply waits</small></span></div>
-      <div class="rv" style="--d:.18s"><i><svg><use href="#cal"/></svg></i><span><b>Bookings with reminders</b><small>And no-show recovery</small></span></div>
-      <div class="rv" style="--d:.24s"><i><svg><use href="#doc"/></svg></i><span><b>Proof every month</b><small>A report under your brand</small></span></div>
+    <h2 class="rv">Your work stops at the <b>inquiry</b>. <br>Your <b>reputation</b> doesn’t.<span class="soft">Leads aren’t bad. They just don’t get the attention they need.</span></h2>
+    <div class="wins">
+      <div class="rv" style="--d:.0s"><i><svg><use href="#bolt"/></svg></i><span><b>Every lead answered in a minute</b><small>Day or night, from every source.</small></span></div>
+      <div class="rv" style="--d:.06s"><i><svg><use href="#phone"/></svg></i><span><b>Missed calls get a text back</b><small>So callers don't ring the next company.</small></span></div>
+      <div class="rv" style="--d:.12s"><i><svg><use href="#bell"/></svg></i><span><b>Followed up until they reply</b><small>With team alerts, so no reply waits.</small></span></div>
+      <div class="rv" style="--d:.18s"><i><svg><use href="#cal"/></svg></i><span><b>Bookings that show up</b><small>Reminders and no-show recovery.</small></span></div>
+      <div class="rv" style="--d:.24s"><i><svg><use href="#doc"/></svg></i><span><b>Results every month</b><small>A monthly report under your brand.</small></span></div>
     </div>
-    <p class="trio-more rv">Plus a CRM, inbox, calendar, reviews, content scheduling, e-signatures and text-to-pay for each client, included.</p>
+    <div class="incl-strip rv">
+      <b>Plus, in every client's login:</b>
+      <span>Pipeline</span><span>Inbox</span><span>Calendar</span><span>Reviews</span><span>Content scheduling</span><span>Tasks</span><span>Surveys</span>
+      <em>No extra cost</em>
+    </div>
   </div>
 </section>
 
@@ -722,7 +771,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       <div class="sc-copy">
         <span class="pill" style="align-self:flex-start"><i><svg><use href="#hand"/></svg></i>Client retention</span>
         <h2>Clients stay when their leads get answered.</h2>
-        <p>Your client replies when they find time. By then, the lead's gone, and you get the blame. Every lead gets a reply in a minute, and follow-up until they reply or book.</p>
+        <p>When your client replies hours later, the lead has already moved on, and your agency takes the blame. Every lead gets a reply in a minute, and follow-up until it closes.</p>
         <div class="sc-foot"><svg><use href="#checkc"/></svg>Built to keep the clients you have.</div>
       </div>
       <div class="sc-art g1">
@@ -743,7 +792,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       <div class="sc-copy">
         <span class="pill" style="align-self:flex-start"><i><svg><use href="#tagi"/></svg></i>Bigger packages</span>
         <h2>More value in your package. No new hires.</h2>
-        <p>Add lead follow-up to what you already sell. Our team sets up each client and keeps it working.</p>
+        <p>Add lead-to-close to what you already sell. Our team sets up each client and keeps it working.</p>
         <div class="sc-foot"><svg><use href="#checkc"/></svg>Nothing new to sell.</div>
       </div>
       <div class="sc-art g2">
@@ -753,7 +802,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
           <div style="margin-top:14px">
             <div class="pkg-line"><span>Google Ads management</span><span>$900</span></div>
             <div class="pkg-line"><span>Local SEO</span><span>$600</span></div>
-            <div class="pkg-line new"><span>Lead follow-up</span><span>+$200</span></div>
+            <div class="pkg-line new"><span>Lead-to-close</span><span>+$200</span></div>
           </div>
           <div class="pkg-total"><span class="sub">New monthly total</span><b>$1,700</b></div>
         </div>
@@ -764,7 +813,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       <div class="sc-copy">
         <span class="pill" style="align-self:flex-start"><i><svg><use href="#bolt"/></svg></i>Already pay for a CRM?</span>
         <h2>Paying for a CRM you never got running for your clients?</h2>
-        <p>Setup, texting approval and client support eat the time. Our team sets up each client from one tested system, gets texting approved and answers your tickets.</p>
+        <p>Setup, texting approval and ongoing support take up the time. Our team sets up each client from one tested system, gets texting approved and answers your tickets.</p>
         <div class="sc-foot"><svg><use href="#checkc"/></svg>Your part: a 10-minute form and a 30-minute call per client.</div>
       </div>
       <div class="sc-art g3">
@@ -804,6 +853,12 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       </div>
     </article>
   </div>
+  <div class="wrap">
+    <div class="cta-row rv">
+      <a class="btn" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
+      <a class="btn ghost" href="/whats-included/">See everything included</a>
+    </div>
+  </div>
 </section>
 
 <!-- WHAT'S INCLUDED (night) -->
@@ -812,15 +867,15 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
   <div class="wrap">
     <div class="sec-head">
       <span class="pill rv"><i><svg><use href="#check"/></svg></i>What every client account gets</span>
-      <h2 class="rv" style="--d:.05s">Lead follow-up in every client account</h2>
-      <p class="lead rv" style="--d:.1s">Six follow-ups always on, free add-ons to switch on per client, and the tools your client's team uses every day.</p>
+      <h2 class="rv" style="--d:.05s">Lead-to-close in every client account</h2>
+      <p class="lead rv" style="--d:.1s">Six core features always on, add-ons for each client's needs, and the tools your client's team uses every day.</p>
     </div>
 
     <div class="bento">
       <article class="tile wide rv">
         <span class="k">Always on</span>
         <h3>Instant reply and missed-call text-back</h3>
-        <p>Every new lead gets a text and an email within a minute, at any hour. Missed calls get a text back, plus a team alert.</p>
+        <p>A text and an email within a minute, any hour. Missed calls get a text back.</p>
         <div class="viz">
           <div class="thread" aria-hidden="true">
             <span class="sys">Missed call · (614) 555-0142 · 6:12 pm</span>
@@ -834,7 +889,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       <article class="tile rv" style="--d:.06s">
         <span class="k">Always on</span>
         <h3>Lead nurture</h3>
-        <p>5 to 6 messages over 10 days by text and email. Stops the moment they reply or book.</p>
+        <p>5 to 6 messages over 10 days. Stops when they reply or book.</p>
         <div class="viz drift" aria-hidden="true">
           <span class="chip">Day 1 · Text</span>
           <span class="chip">Day 2 · Email</span>
@@ -847,7 +902,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       <article class="tile rv">
         <span class="k">Always on</span>
         <h3>Team alerts</h3>
-        <p>The person handling leads hears when a lead comes in, replies or books. No answer in 15 minutes? Another alert, then the backup person.</p>
+        <p>Your client's team is alerted first. No response in 15 minutes? A backup contact is notified.</p>
         <div class="viz">
           <div class="notice"><small>6:14 pm · lead replied</small><div class="row"><span>"Can someone come tomorrow?"</span><span class="go">Alert sent</span></div></div>
           <div class="notice"><small>6:29 pm · no answer yet</small><div class="row"><span>Backup person alerted</span><span class="go">Sent</span></div></div>
@@ -857,7 +912,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       <article class="tile light rv" style="--d:.06s">
         <span class="k">Always on</span>
         <h3>Booking and reminders</h3>
-        <p>A booking page, a confirmation, and reminders 24 hours and 2 hours before.</p>
+        <p>A booking page, then reminders 24h and 2h before.</p>
         <div class="viz">
           <div class="cal" aria-hidden="true"><span>Mon</span><span>Tue</span><span class="on">Wed</span><span>Thu</span><span>Fri</span></div>
           <div class="chips"><span class="chip"><svg><use href="#check"/></svg>Confirmed</span><span class="chip"><svg><use href="#check"/></svg>24h reminder</span><span class="chip"><svg><use href="#check"/></svg>2h reminder</span></div>
@@ -867,7 +922,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       <article class="tile rv" style="--d:.12s">
         <span class="k">Always on</span>
         <h3>No-show recovery</h3>
-        <p>A rebooking message the same day and the next morning, plus a team alert.</p>
+        <p>A rebooking text the same day and next morning.</p>
         <div class="viz">
           <div class="notice"><small>10:45 am · no-show</small><div class="row"><span>Priya missed 10:30</span><span class="go">Rebook sent</span></div></div>
           <div class="notice"><small>Yesterday</small><div class="row"><span>Sam rebooked for Friday</span><span class="go">Booked</span></div></div>
@@ -877,30 +932,33 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
       <article class="tile wide-md rv">
         <span class="k">Ready on day one</span>
         <h3>Form, booking page, landing page and website chat</h3>
-        <p>Built in your client's business details, with the consent wording. Website chat asks for a number and carries on by text.</p>
+        <p>Built in your client's details. Ready on day one.</p>
         <div class="viz tools">
           <span class="chip">Lead form</span><span class="chip">Booking page</span><span class="chip">Landing page</span><span class="chip">Website chat</span>
         </div>
       </article>
 
-      <article class="tile wide rv" style="--d:.06s">
-        <span class="k">Free add-ons · switch on per client</span>
-        <h3>Reviews, quotes, repeat work and old leads</h3>
-        <p>Review requests, Quote follow-up, Service reminders, Referral ask, Keyword replies and Old-lead reactivation. Free to switch on. The texts and emails they send are usage.</p>
-        <div class="viz">
-          <div class="wave" aria-hidden="true">
-            <span style="--d:0"></span><span style="--d:1"></span><span style="--d:2"></span><span style="--d:3"></span><span style="--d:4"></span><span style="--d:5"></span><span style="--d:6"></span><span style="--d:7"></span><span style="--d:8"></span><span style="--d:9"></span><span style="--d:10"></span><span style="--d:11"></span><span style="--d:12"></span><span style="--d:13"></span><span style="--d:14"></span><span style="--d:15"></span>
-          </div>
-          <p class="fine-n" style="margin-top:12px">Also: the AI chat and voice agent. Pay per use, billed to you, and not part of the $175. Resell it to your client if you like.</p>
+      <article class="tile wide addons rv" style="--d:.06s">
+        <span class="k">Free add-ons</span>
+        <h3>Seven add-ons. One switch each.</h3>
+        <p>Switch on what each client needs, in your hub.</p>
+        <div class="viz addon-grid">
+          <span class="ad on" style="--i:0"><i class="sw"></i>Review requests</span>
+          <span class="ad on" style="--i:1"><i class="sw"></i>Quote follow-up</span>
+          <span class="ad" style="--i:2"><i class="sw"></i>Service reminders</span>
+          <span class="ad" style="--i:3"><i class="sw"></i>Referral ask</span>
+          <span class="ad on" style="--i:2"><i class="sw"></i>Keyword replies</span>
+          <span class="ad" style="--i:4"><i class="sw"></i>Old-lead reactivation</span>
+          <span class="ad ai on" style="--i:3"><i class="sw"></i>AI chat and voice agent<em>Pay per use</em></span>
         </div>
       </article>
 
       <article class="tile full light rv">
         <span class="k">Included tools</span>
         <h3>The tools your client's team uses every day</h3>
-        <p>In each client's web login, for their team and yours. We keep them working. Nothing extra to pay, except usage.</p>
+        <p>In every client's web login. Nothing extra to pay.</p>
         <div class="viz chips">
-          <span class="chip">CRM and pipeline</span><span class="chip">Inbox</span><span class="chip">Calendar</span><span class="chip">Reviews</span><span class="chip">Content scheduling</span><span class="chip">Tasks</span><span class="chip">Documents and e-signatures</span><span class="chip">Text-to-pay and invoices</span><span class="chip">Surveys</span>
+          <span class="chip">CRM and pipeline</span><span class="chip">Inbox</span><span class="chip">Calendar</span><span class="chip">Reviews</span><span class="chip">Content scheduling</span><span class="chip">Tasks</span><span class="chip">Surveys</span>
         </div>
       </article>
     </div>
@@ -921,12 +979,12 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
     <div class="how-grid">
       <div>
         <div class="steps" role="tablist" aria-label="How it works">
-          <button class="step on" role="tab" aria-selected="true" data-step="0"><b><em>01</em>Book a discovery call</b><p>You get access to the hub straight away, with a demo client to click through before we talk.</p></button>
-          <button class="step" role="tab" aria-selected="false" data-step="1"><b><em>02</em>Add your first client</b><p>A 10-minute form in the hub. It only asks what you already know about your client.</p></button>
+          <button class="step on" role="tab" aria-selected="true" data-step="0"><b><em>01</em>Book a discovery call</b><p>You get <span class="mark">access to the hub straight away</span>, with a demo client to click through before we talk.</p></button>
+          <button class="step" role="tab" aria-selected="false" data-step="1"><b><em>02</em>Add your first client</b><p>A <span class="mark">10-minute form</span> in the hub. It only asks what you already know about your client.</p></button>
           <button class="step" role="tab" aria-selected="false" data-step="2"><b><em>03</em>A 30-minute setup call</b><p>With our team. We connect whatever is left together, then test it on your phone.</p></button>
-          <button class="step" role="tab" aria-selected="false" data-step="3"><b><em>04</em>Channels go live one by one</b><p>Texts start after SMS registration is approved. Emails start after the email records are set.</p></button>
+          <button class="step" role="tab" aria-selected="false" data-step="3"><b><em>04</em>Channels go live one by one</b><p>Texts start after SMS registration is approved. Emails start once the email records are in place.</p></button>
         </div>
-        <div class="how-cta"><a class="btn lime" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0T0GUV3CvMoAlQ0I1aDNFuha23Fiv6uMxIg3J3F5-Jpy4ELao6kHKzNRUMXYg2uUGJciYs9p-S" target="_blank" rel="noopener"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a></div>
+        <div class="how-cta"><a class="btn lime" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a></div>
       </div>
 
       <div class="panel">
@@ -935,7 +993,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
             <h5>Your hub</h5><span class="sub"><span data-brand>Your Agency</span> · open right after you book</span>
             <div style="margin-top:10px">
               <div class="field"><small>Demo client</small>Northside Plumbing (example data)</div>
-              <div class="field"><small>Look at first</small>The follow-up messages, the client report and the sales kit</div>
+              <div class="field"><small>Look at first</small>The message wording, the client report and the sales kit</div>
               <div class="field"><small>Think about before the call</small>Which client has the most leads and the slowest replies?</div>
             </div>
           </div>
@@ -981,41 +1039,41 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
 </section>
 </div>
 
-<!-- YOU vs US + OWNERSHIP -->
-<section class="split-sec">
+<!-- TEAM: the specialists behind every account, the agency's small part, and three promises -->
+<section class="split-sec" id="team">
   <div class="wrap">
-    <div class="sec-head">
-      <span class="pill rv"><i><svg><use href="#hand"/></svg></i>Who does what</span>
-      <h2 class="rv" style="--d:.05s">What we do. What you do.</h2>
+    <div class="wi-head">
+      <h2 class="rv">A dedicated team behind every client</h2>
+      <p class="rv" style="--d:.08s">Specialists who set up, watch and maintain each client's CRM. <span class="mark">You never become the support desk.</span></p>
     </div>
-    <div class="split">
-      <div class="side you rv">
-        <h3>Your part</h3>
-        <ul>
-          <li><svg><use href="#check"/></svg>Add each client with a 10-minute form</li>
-          <li><svg><use href="#check"/></svg>Join a 30-minute setup call per client</li>
-          <li><svg><use href="#check"/></svg>Connect lead sources: website snippet, Facebook Page, Google lead forms, the new number</li>
-          <li><svg><use href="#check"/></svg>Add the email records, or give us access</li>
-          <li><svg><use href="#check"/></svg>Get your client's SMS registration details to our team: legal name, EIN and a contact person</li>
-        </ul>
-        <div class="big" style="font-size:36px; letter-spacing:-.03em">One hub for it all.<small>Every client's results, messages and tickets in one place.</small></div>
-      </div>
-      <div class="side us rv" style="--d:.08s">
-        <h3>Our part</h3>
-        <ul>
-          <li><svg><use href="#check"/></svg>Build each client from our standard system, under your brand</li>
-          <li><svg><use href="#check"/></svg>Buy and set up the client's local number</li>
-          <li><svg><use href="#check"/></svg>Submit SMS registration and fix anything carriers ask for</li>
-          <li><svg><use href="#check"/></svg>Test every lead source before go-live</li>
-          <li><svg><use href="#check"/></svg>Keep every account working and up to date</li>
-          <li><svg><use href="#check"/></svg>Answer tickets within 4 business hours</li>
-        </ul>
-      </div>
+    <div class="team">
+      <ul class="team-list">
+        <li class="rv"><i><svg><use href="#check"/></svg></i><div><b>Setup and testing</b><span>Every account built and tested before go-live.</span></div></li>
+        <li class="rv" style="--d:.05s"><i><svg><use href="#phone"/></svg></i><div><b>Texting approval</b><span>We register it and fix anything carriers ask for.</span></div></li>
+        <li class="rv" style="--d:.1s"><i><svg><use href="#bell"/></svg></i><div><b>Account checks</b><span>If a lead source goes quiet, we look into it.</span></div></li>
+        <li class="rv" style="--d:.15s"><i><svg><use href="#bolt"/></svg></i><div><b>Fixes and updates</b><span>Improvements reach every client at once.</span></div></li>
+        <li class="rv" style="--d:.2s"><i><svg><use href="#doc"/></svg></i><div><b>Your change requests</b><span>Hours, sources and alerts, changed for you.</span></div></li>
+        <li class="rv" style="--d:.25s"><i><svg><use href="#chat"/></svg></i><div><b>Tickets in 4 business hours</b><span>Monday to Friday, 9am to 6pm Eastern.</span></div></li>
+      </ul>
+      <figure class="ticket rv" style="--d:.1s" data-ui>
+        <div class="ticket-head"><div><b>Change request</b><small>Northside Plumbing</small></div><span class="st booked">Resolved</span></div>
+        <div class="tmsg you"><small>You · 10:02</small><p>Can Northside's texts start at 7am instead of 9am?</p></div>
+        <div class="tmsg ours"><small>Our team · 11:14</small><p>Done. Texts for Northside now go out from 7am, and we checked tomorrow's reminders too.</p></div>
+        <figcaption>Example ticket</figcaption>
+      </figure>
+    </div>
+    <div class="yourpart rv">
+      <b>Your part</b>
+      <span>10-minute form</span><span>30-minute setup call</span><span>Connect lead sources</span><span>Email records</span><span>Your client's SMS details</span>
     </div>
     <div class="promises">
       <div class="promise rv"><i><svg><use href="#tagi"/></svg></i><b>Your brand only</b><p>Your client sees your name, never ours, on every text, login and report.</p></div>
-      <div class="promise rv" style="--d:.06s"><i><svg><use href="#hand"/></svg></i><b>Your client relationship</b><p>You stay the point of contact. We never contact your clients. Anything we need from them comes to you as a ready-made message.</p></div>
-      <div class="promise rv" style="--d:.12s"><i><svg><use href="#pause"/></svg></i><b>Pause any client, any time</b><p>Paused clients aren't billed. While a client is paused, their leads aren't followed up.</p></div>
+      <div class="promise rv" style="--d:.06s"><i><svg><use href="#hand"/></svg></i><b>Your client relationship</b><p>You stay the point of contact. <span class="mark">We never contact your clients.</span></p></div>
+      <div class="promise rv" style="--d:.12s"><i><svg><use href="#pause"/></svg></i><b>Pause any client, any time</b><p>Paused clients aren't billed, and their leads aren't followed up.</p></div>
+    </div>
+    <div class="cta-row rv">
+      <a class="btn" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
+      <a class="btn ghost" href="/pricing/">See pricing</a>
     </div>
   </div>
 </section>
@@ -1025,8 +1083,8 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
   <div class="wrap">
     <div class="sec-head">
       <span class="pill rv"><i><svg><use href="#tagi"/></svg></i>Pricing</span>
-      <h2 class="rv" style="--d:.05s">Less than one <span class="hl">lost client.</span></h2>
-      <p class="lead rv" style="--d:.1s">One price per live client, plus usage passed through.</p>
+      <h2 class="rv" style="--d:.05s">One simple price <span class="hl">per client.</span></h2>
+      <p class="lead rv" style="--d:.1s"><span class="mark">You’re billed only for clients that are live</span>, with usage itemized on every invoice.</p>
     </div>
 
     <div class="price-wrap rv">
@@ -1034,36 +1092,37 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
         <div class="price-card">
           <span class="tag" style="align-self:flex-start; background:var(--ground)">Per live client</span>
           <div class="amt">$175<span> / month</span></div>
-          <p class="fine">Plus $300 setup per client, charged in your hub when you confirm the client.</p>
+          <div class="setup"><b>+ $300</b> one-time setup per client</div>
           <ul>
-            <li><svg><use href="#check"/></svg>The $175 starts from your client's first live channel, on your next invoice. No part-month charge.</li>
-            <li><svg><use href="#check"/></svg>Usage (texts, calls, email) passed through from your 2nd invoice, itemised per client so you can pass it on. Our estimate: usually about $15–30 a month per client.</li>
-            <li><svg><use href="#check"/></svg>Paused clients aren't billed.</li>
-            <li><svg><use href="#check"/></svg>AI chat and voice agent: pay per use, billed to you. Not part of the $175.</li>
-            <li><svg><use href="#check"/></svg>One invoice for all your clients. All prices in US dollars.</li>
-            <li><svg><use href="#check"/></svg>Fully white-label</li>
+            <li><svg><use href="#check"/></svg>Billing begins when the client's first channel goes live</li>
+            <li><svg><use href="#check"/></svg>No charge while a client is paused</li>
+            <li><svg><use href="#check"/></svg>Usage billed from your second invoice, itemized per client. Typically $15–30 a month</li>
+            <li><svg><use href="#check"/></svg>AI agent billed per use, only if enabled</li>
+            <li><svg><use href="#check"/></svg>One consolidated invoice for all clients, in US dollars</li>
           </ul>
-          <a class="btn" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0T0GUV3CvMoAlQ0I1aDNFuha23Fiv6uMxIg3J3F5-Jpy4ELao6kHKzNRUMXYg2uUGJciYs9p-S" target="_blank" rel="noopener" style="align-self:flex-start"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
-          <p class="fine">Nothing to pay on this site. You add your card in your hub.</p>
+          <a class="btn" href="/book/" style="align-self:flex-start"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
+          <p class="fine">All billing is handled in your agency hub. <a href="/pricing/#terms" style="text-decoration:underline">See the terms</a></p>
         </div>
 
-        <div class="calc">
-          <h3>One client, one year</h3>
-          <p class="fine" style="margin-top:-8px">Example: a client on a $1,500 monthly retainer.</p>
-          <div class="slider">
-            <div class="row-lbl"><span>One client leaves</span><output>$18,000</output></div>
-            <div class="bar" style="--p:100%"></div>
+        <div class="incl">
+          <h3>Included with every client</h3>
+          <div class="incl-counts">
+            <a href="/whats-included/#always-on"><b>6</b><span>Core features, always on</span></a>
+            <a href="/whats-included/#add-ons"><b>7</b><span>Free add-ons</span></a>
+            <a href="/whats-included/#tools"><b>7</b><span>Tools in every login</span></a>
           </div>
-          <div class="slider">
-            <div class="row-lbl"><span>Setup + 12 months with us</span><output>$2,400</output></div>
-            <div class="bar" style="--p:13.3%"></div>
-          </div>
-          <div class="sum">
-            <div><span>Lost retainer</span><span>$1,500 × 12</span></div>
-            <div><span>With us</span><span>$300 + 12 × $175</span></div>
-            <div class="net"><span>One lost client vs a year with us</span><b>$18,000 vs $2,400</b></div>
-          </div>
-          <p class="verdict">Example figures. Usage is billed on top of the $2,400.</p>
+          <h4>Plus your agency hub and our team</h4>
+          <ul class="incl-list">
+            <li style="--i:0"><i><svg><use href="#check"/></svg></i>Dedicated specialist team</li>
+            <li style="--i:1"><i><svg><use href="#check"/></svg></i>Performance by client</li>
+            <li style="--i:2"><i><svg><use href="#check"/></svg></i>White-label monthly report</li>
+            <li style="--i:3"><i><svg><use href="#check"/></svg></i>Editable message copy</li>
+            <li style="--i:4"><i><svg><use href="#check"/></svg></i>Live setup tracking</li>
+            <li style="--i:5"><i><svg><use href="#check"/></svg></i>Pause or resume any client</li>
+            <li style="--i:6"><i><svg><use href="#check"/></svg></i>Support within 4 business hours</li>
+            <li style="--i:7"><i><svg><use href="#check"/></svg></i>Sales kit for your pitch</li>
+          </ul>
+          <a class="incl-link" href="/whats-included/">See everything included<svg><use href="#arrow"/></svg></a>
         </div>
       </div>
     </div>
@@ -1075,7 +1134,7 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
   <div class="wrap">
     <div class="sec-head">
       <span class="pill rv"><i><svg><use href="#doc"/></svg></i>FAQ</span>
-      <h2 class="rv" style="--d:.05s">Straight answers</h2>
+      <h2 class="rv" style="--d:.05s">Common questions</h2>
     </div>
     <div class="faq-box rv">
       <div class="tabs" role="tablist" aria-label="FAQ topics">
@@ -1084,22 +1143,22 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
         <button role="tab" aria-selected="false" data-tab="bill">Billing and support</button>
       </div>
       <div class="qa-list">
-        <details class="qa" data-cat="start" open><summary>Do you have case studies?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Not yet. We’re new, so start with one client and judge us on that client’s monthly report.</div></details>
+        <details class="qa" data-cat="start" open><summary>Do you have case studies?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">We’re onboarding our first agency partners now. The best proof is your own: start with one client and judge us on that client’s first monthly report.</div></details>
         <details class="qa" data-cat="start"><summary>What does my client need to provide?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Only the SMS registration details: their legal business name, EIN, and a contact person at the business. They go through you, and our team enters them during setup. Only texts wait on them; everything else goes live without them.</div></details>
-        <details class="qa" data-cat="start"><summary>What does it run on?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">HighLevel, a CRM a lot of agencies already know. Our team sets up and supports each client’s account, and your clients only see your brand. <a href="/whats-included/" style="text-decoration:underline">See everything included</a>.</div></details>
+        <details class="qa" data-cat="start"><summary>What does it run on?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">HighLevel, a CRM a lot of agencies already know. Our team sets up and supports each client’s account, and your clients only see your brand. <a href="/how-it-works/#built-on" style="text-decoration:underline">See how it fits together</a>.</div></details>
 
         <details class="qa" data-cat="own" hidden><summary>Do you contact my clients?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">No, never. You stay the point of contact. Anything we need from your client comes to you as a ready-made message to send under your brand.</div></details>
-        <details class="qa" data-cat="own" hidden><summary>Is there an app?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">No. Your client’s team logs in on the web.</div></details>
+        <details class="qa" data-cat="own" hidden><summary>How does my client’s team log in?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Through a web login that works on any computer or phone.</div></details>
         <details class="qa" data-cat="own" hidden><summary>What can I see and change in my hub?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Every client’s results, leads, monthly report and tickets. You can edit the message wording for each client; edits that pass our checks go live straight away. Changes to timing, lead sources, contact hours and alert recipients are change requests to our team.</div></details>
         <details class="qa" data-cat="own" hidden><summary>Can I pause or cancel a client?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Yes, any time, from your hub. Paused clients aren’t billed. While a client is paused, their leads aren’t followed up.</div></details>
 
-        <details class="qa" data-cat="bill" hidden><summary>How is usage billed?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Texts, calls and email are passed through from your 2nd invoice, as the previous month’s usage, itemised per client so you can pass them on. Our estimate is usually about $15–30 a month per client. If a client’s usage reaches $30 mid-month, it’s charged then. The AI chat and voice agent is pay per use, billed to you.</div></details>
-        <details class="qa" data-cat="bill" hidden><summary>How do I pay?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">In your hub, never on this site. Book a call and you get hub access. You add your card there, and the $300 setup is charged when you confirm a client. All prices are in US dollars, wherever you’re based.</div></details>
+        <details class="qa" data-cat="bill" hidden><summary>How is usage billed?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Texts, calls and email are passed through from your 2nd invoice, as the previous month’s usage, itemized per client so you can pass them on. Typically $15–30 a month per client. If a client’s usage reaches $30 mid-month, it’s charged then. The AI chat and voice agent is pay per use, billed to you.</div></details>
+        <details class="qa" data-cat="bill" hidden><summary>How do I pay?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Through your agency hub. You get hub access as soon as you book a call, and the $300 setup is charged when you confirm a client. All prices are in US dollars, wherever you’re based.</div></details>
         <details class="qa" data-cat="bill" hidden><summary>When are you available?<i><svg><use href="#plus"/></svg></i></summary><div class="ans">Monday to Friday, 9am to 6pm Eastern. Tickets are answered within 4 business hours.</div></details>
 
         <div class="ask">
           <div><b>Still have questions?</b><p>Book a short call and we'll walk through how it would work for one of your clients.</p></div>
-          <a class="btn sm" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0T0GUV3CvMoAlQ0I1aDNFuha23Fiv6uMxIg3J3F5-Jpy4ELao6kHKzNRUMXYg2uUGJciYs9p-S" target="_blank" rel="noopener"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
+          <a class="btn sm" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
         </div>
       </div>
     </div>
@@ -1112,9 +1171,9 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
     <div class="final-box night" data-dark>
       <span class="pill rv"><i><svg><use href="#bolt"/></svg></i>Get started</span>
       <h2 class="rv" style="--d:.05s">Start with <span class="iri-text">one client.</span></h2>
-      <p class="lead rv" style="--d:.1s">Pick the client with the most leads and the slowest replies. We’ll set it up under your brand.</p>
+      <p class="lead rv" style="--d:.1s">Choose the client with the highest lead volume and the slowest response times. We’ll set everything up under your brand.</p>
       <div class="hero-ctas rv" style="--d:.15s">
-        <a class="btn lime" href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0T0GUV3CvMoAlQ0I1aDNFuha23Fiv6uMxIg3J3F5-Jpy4ELao6kHKzNRUMXYg2uUGJciYs9p-S" target="_blank" rel="noopener"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
+        <a class="btn lime" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
       </div>    </div>
   </div>
 </section>
@@ -1126,11 +1185,11 @@ Your leads aren’t bad. They just don’t get the attention they need.</span></
     <div class="foot">
       <div>
         <a class="brand" href="#top" aria-label="SellableCRM home"><span class="logo-pri"></span></a>
-        <p>White-label lead follow-up for marketing agencies.</p>
+        <p>White-label lead-to-close for marketing agencies.</p>
       </div>
-      <div><h6>Service</h6><ul><li><a href="/whats-included/">What's included</a></li><li><a href="#how">How it works</a></li><li><a href="#pricing">Pricing</a></li></ul></div>
-      <div><h6>Help</h6><ul><li><a href="#faq">FAQ</a></li><li><a href="https://calendar.google.com/calendar/appointments/schedules/AcZssZ0T0GUV3CvMoAlQ0I1aDNFuha23Fiv6uMxIg3J3F5-Jpy4ELao6kHKzNRUMXYg2uUGJciYs9p-S" target="_blank" rel="noopener">Book a call</a></li></ul></div>
-      <div><h6>Legal</h6><ul><li><a href="#top">Terms</a></li><li><a href="#top">Privacy</a></li></ul></div>
+      <div><h6>Service</h6><ul><li><a href="/whats-included/">What's included</a></li><li><a href="/how-it-works/">How it works</a></li><li><a href="/pricing/">Pricing</a></li></ul></div>
+      <div><h6>Help</h6><ul><li><a href="#faq">FAQ</a></li><li><a href="/book/">Book a call</a></li></ul></div>
+      <!-- Legal links hidden until the Terms and Privacy pages exist -->
     </div>
     <div class="legal"><span>© 2026 SellableCRM. All rights reserved.</span><a href="#top">Back to top ↑</a></div>
   </div>
