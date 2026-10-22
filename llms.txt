@@ -1,0 +1,45 @@
+# SellableCRM
+
+> SellableCRM is a white-label lead-to-close service for US marketing agencies. Every lead an agency's clients receive is answered within a minute and followed up until it closes, all under the agency's brand. Our team builds and maintains the system inside each client's account.
+
+## What it does
+- Who it's for: marketing agencies that want to offer lead follow-up to their clients without new hires. The agency's clients see only the agency's brand.
+- Six core features, always on, in every client account: instant reply (a text and an email to every new lead), missed-call text-back, lead nurture (5 to 6 messages over days 1 to 10), team alerts, booking and reminders, and no-show recovery.
+- Ready on day one: lead form, booking page, landing page and website chat.
+- Seven add-ons, free to switch on: review requests, quote follow-up, service reminders, referral ask, keyword replies, old-lead reactivation, and an AI chat and voice agent (pay per use).
+- Seven tools in every login: CRM and pipeline, inbox, calendar, reviews, content scheduling, tasks, and surveys and quizzes.
+- Agency hub: add clients, see results per client, white-label monthly reports, edit message wording, pause or resume clients, raise tickets, and a sales kit.
+- Built on HighLevel. Clients never see HighLevel or SellableCRM.
+
+## How it works
+1. Book a discovery call. Hub access with a demo client is given straight away.
+2. Add a client with a 10-minute form in the hub.
+3. A 30-minute setup call with our team.
+4. Channels go live one by one. Texts start after SMS registration is approved.
+About 40 minutes of the agency's time per client.
+
+## Pricing (US dollars)
+- $175 a month per live client. Billing begins when the client's first channel goes live.
+- $300 one-time setup per client, charged when the client is confirmed.
+- Usage (texts, calls and email) passed through from the second invoice, itemized per client, typically $15–30 a month.
+- Custom work at $40 an hour, quoted in advance.
+- No charge while a client is paused. Cancel any time from the hub.
+
+## Common questions
+- Will the agency's clients know SellableCRM exists? No. Texts, logins and reports carry the agency's brand, and SellableCRM never contacts the agency's clients.
+- Who does the work? A dedicated team of specialists sets up, tests and maintains each client's account, registers texting with the carriers, checks lead sources and handles change requests.
+- Does the agency need to learn HighLevel? No. The agency spends about 40 minutes per client: a 10-minute form and a 30-minute setup call.
+- If the agency cancels a client, who keeps the data? The agency. It receives a full export of every lead and conversation for that client. Service stays active until the end of the current billing period, and cancellation can be reversed before then.
+
+## Support
+Monday to Friday, 9am to 6pm Eastern. Tickets answered within 4 business hours.
+
+## Pages
+- [Home](https://sellablecrm.com/)
+- [What's included](https://sellablecrm.com/whats-included/)
+- [How it works](https://sellablecrm.com/how-it-works/)
+- [Pricing](https://sellablecrm.com/pricing/)
+- [GHL specialists](https://sellablecrm.com/ghl-specialist/): a dedicated HighLevel specialist team for every client, compared with hiring a freelancer
+- [Speed-to-lead for marketing agencies](https://sellablecrm.com/speed-to-lead/): guide
+- [White-label missed-call text-back](https://sellablecrm.com/missed-call-text-back/): guide
+- [Book a call](https://sellablecrm.com/book/)
