@@ -896,6 +896,10 @@ footer { padding: 56px 0 40px; }
   </defs>
 </svg>
 
+<style>
+/* ---------- Header: hub login (desktop only; on phones and tablets the header shows just the logo) ---------- */
+@media (max-width: 860px) { .nav .nav-login { display: none; } }
+</style>
 <nav class="nav" id="nav" aria-label="Main">
   <a class="brand" href="#top" aria-label="SellableCRM home"><span class="logo"><span class="logo-pri"></span><span class="logo-rev"></span></span></a>
   <ul>
@@ -904,7 +908,7 @@ footer { padding: 56px 0 40px; }
     <li><a href="/pricing/">Pricing</a></li>
     <li><a href="#faq">FAQ</a></li>
   </ul>
-  <a class="btn sm" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a call</a>
+  <a class="btn sm nav-login" href="https://hub.sellablecrm.com/"><span class="ico"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M11.5 3.5h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 10h8.5M8.5 6.5 12 10l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M11.5 3.5h3a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-3" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/><path d="M3.5 10h8.5M8.5 6.5 12 10l-3.5 3.5" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Hub login</a>
 </nav>
 
 <main id="top">
