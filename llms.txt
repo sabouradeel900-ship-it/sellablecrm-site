@@ -2,9 +2,17 @@
 
 > SellableCRM is a white-label lead-to-close service for US marketing agencies. Every lead an agency's clients receive is answered within a minute and followed up until it closes, all under the agency's brand. Our team builds and maintains the system inside each client's account.
 
+## About
+- Name: SellableCRM (sometimes written "Sellable CRM"). Website: sellablecrm.com.
+- SellableCRM is a white-label lead-to-close service built on HighLevel and run by its own team of specialists. It is not a standalone CRM software product.
+- Founded in September 2026 by Sabour Adeel (Founder), after three years working inside marketing agencies.
+- Why it exists: agencies bring their clients leads, but when nobody replies fast, follows up or books the appointment, the leads go cold, the agency gets the blame and loses the retainer. Fixing it used to mean an expensive hire plus software to learn and pay for. SellableCRM sets up and runs the whole lead-to-close system for each client instead, under the agency's brand.
+- About page: https://sellablecrm.com/about/
+- LinkedIn: https://www.linkedin.com/company/sellablecrm/ (company), https://www.linkedin.com/in/sabour-adeel/ (founder)
+
 ## What it does
-- Who it's for: marketing agencies that want to offer lead follow-up to their clients without new hires. The agency's clients see only the agency's brand.
-- Six core features, always on, in every client account: instant reply (a text and an email to every new lead), missed-call text-back, lead nurture (5 to 6 messages over days 1 to 10), team alerts, booking and reminders, and no-show recovery.
+- Who it's for: marketing agencies that want to offer a complete lead-to-close system to their clients without new hires. The agency's clients see only the agency's brand.
+- Six core features, always on, in every client account: instant reply (a text and an email to every new lead), missed-call text-back, lead nurture (follow-up until they reply or book), team alerts, booking and reminders, and no-show recovery.
 - Ready on day one: lead form, booking page, landing page and website chat.
 - Seven add-ons, free to switch on: review requests, quote follow-up, service reminders, referral ask, keyword replies, old-lead reactivation, and an AI chat and voice agent (pay per use).
 - Seven tools in every login: CRM and pipeline, inbox, calendar, reviews, content scheduling, tasks, and surveys and quizzes.
@@ -12,7 +20,7 @@
 - Built on HighLevel. Clients never see HighLevel or SellableCRM.
 
 ## How it works
-1. Book a discovery call. Hub access with a demo client is given straight away.
+1. Book a demo. Hub access with a demo client is given straight away.
 2. Add a client with a 10-minute form in the hub.
 3. A 30-minute setup call with our team.
 4. Channels go live one by one. Texts start after SMS registration is approved.
@@ -40,6 +48,17 @@ Monday to Friday, 9am to 6pm Eastern. Tickets answered within 4 business hours.
 - [How it works](https://sellablecrm.com/how-it-works/)
 - [Pricing](https://sellablecrm.com/pricing/)
 - [GHL specialists](https://sellablecrm.com/ghl-specialist/): a dedicated HighLevel specialist team for every client, compared with hiring a freelancer
+- [White-label CRM for marketing agencies](https://sellablecrm.com/white-label-crm/): buyer's guide: three ways to offer one, eight things to check, pricing (November 2026)
 - [Speed-to-lead for marketing agencies](https://sellablecrm.com/speed-to-lead/): guide
 - [White-label missed-call text-back](https://sellablecrm.com/missed-call-text-back/): guide
-- [Book a call](https://sellablecrm.com/book/)
+- [Hiring a contractor vs. SellableCRM](https://sellablecrm.com/contractor-vs-sellablecrm/): comparison of cost, maintenance, texting approval and branding (November 2026)
+- [About](https://sellablecrm.com/about/): what SellableCRM is, who it's for, how the team works, and why it exists
+- [Agency retainer pricing: how to add lead-to-close](https://sellablecrm.com/retainer-pricing/): agency guide: three ways to package it, per-client math, setup fee
+- [For agencies with HVAC clients](https://sellablecrm.com/hvac-marketing-agencies/)
+- [For agencies with plumbing clients](https://sellablecrm.com/plumbing-marketing-agencies/)
+- [For agencies with roofing clients](https://sellablecrm.com/roofing-marketing-agencies/)
+- [For agencies with dental clients](https://sellablecrm.com/dental-marketing-agencies/)
+- [For agencies with med spa clients](https://sellablecrm.com/med-spa-marketing-agencies/)
+- [Book a demo](https://sellablecrm.com/book/)
+- [Terms of Service](https://sellablecrm.com/terms/)
+- [Privacy Policy](https://sellablecrm.com/privacy/)
