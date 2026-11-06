@@ -410,19 +410,16 @@ p { margin: 0; }
 .hero-note { font-size: 13px; color: var(--ink-3); animation: rise 1s var(--spring) .7s both; }
 @keyframes rise { from { opacity: 0; transform: translateY(32px); } to { opacity: 1; transform: none; } }
 
-.brand-try {
-  display: inline-flex; align-items: center; gap: 10px; margin-top: 8px;
-  padding: 6px 6px 6px 14px; border-radius: 14px; background: var(--paper); border: 1px solid var(--line);
-  font-size: 13px; color: var(--ink-2); animation: rise 1s var(--spring) .78s both;
-}
-.brand-try input {
-  width: 170px; max-width: 46vw; border: 0; background: var(--ground); border-radius: 9px; padding: 7px 10px;
-  font-weight: 600; color: var(--ink);
-}
-.brand-try input:focus { outline: 2px solid var(--lime); outline-offset: 0; }
 
 .stage { position: relative; margin-top: 64px; animation: stageIn 1.4s var(--spring) .55s both; }
 @keyframes stageIn { from { opacity: 0; transform: translateY(80px) scale(.96); } to { opacity: 1; transform: none; } }
+.frame.vid { border-radius: var(--r-lg); border-bottom: 1px solid var(--line); padding: 12px; margin-bottom: 64px; }
+.hero-vid { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 18px; background: var(--night); object-fit: cover; }
+.vid-sound { position: absolute; right: 28px; bottom: 28px; display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer; background: rgba(10, 10, 11, .72); color: #fff; backdrop-filter: blur(8px); border-radius: 999px; padding: 9px 14px 9px 11px; font: 600 13px/1 var(--body); transition: background .2s; }
+.vid-sound:hover { background: rgba(10, 10, 11, .9); }
+.vid-sound svg { width: 18px; height: 18px; }
+.vid-sound[aria-pressed="false"] .wave { opacity: .35; }
+@media (max-width: 600px) { .frame.vid { padding: 6px; border-radius: 20px; margin-bottom: 40px; } .hero-vid { border-radius: 14px; } .vid-sound { right: 12px; bottom: 12px; width: 34px; height: 34px; padding: 0; justify-content: center; } .vid-sound svg { width: 16px; height: 16px; } .vid-sound span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } }
 .frame {
   position: relative; z-index: 1; background: var(--paper); border-radius: var(--r-lg) var(--r-lg) 0 0;
   border: 1px solid var(--line); border-bottom: 0; padding: 14px 14px 0;
@@ -1004,53 +1001,14 @@ footer { padding: 56px 0 40px; }
         <a class="btn" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a demo</a>
         <a class="btn ghost" href="#how">See how it works</a>
       </div>
-      <label class="brand-try" for="brandInput">See it with your agency's name
-        <input id="brandInput" type="text" maxlength="28" value="Your Agency" autocomplete="organization">
-      </label>
     </div>
 
     <div class="stage">
-      <div class="float a">
-        <small><span><span class="dot"></span>Missed call</span><span>just now</span></small>
-        <b>Text sent automatically</b>
-        <p>"Sorry we missed you. This is Northside Plumbing. What can we help with?"</p>
-      </div>
-      <div class="float b">
-        <small><span>Reminder</span><span>Tue 9:00</span></small>
-        <b>Appointment confirmed</b>
-        <p>Dana replied YES to tomorrow's 10:30 visit.</p>
-      </div>
-      <div class="frame">
-        <div class="app">
-          <div class="app-side" aria-hidden="true">
-            <div class="logo-chip" data-initial>Y</div>
-            <span class="on"></span><span></span><span></span><span></span>
-          </div>
-          <div class="app-main">
-            <div class="app-head">
-              <div>
-                <h4>Northside Plumbing</h4>
-                <small>Run by <b data-brand>Your Agency</b> · this month</small>
-              </div>
-              <span class="tag">Example account</span>
-            </div>
-            <div class="kpis">
-              <div class="kpi"><small>New leads</small><b>48</b></div>
-              <div class="kpi"><small>First reply</small><b>41<sub>sec</sub></b></div>
-              <div class="kpi"><small>Booked</small><b>19</b></div>
-              <div class="kpi"><small>No-shows rebooked</small><b>4</b></div>
-            </div>
-            <div class="leads" role="table" aria-label="Example leads">
-              <div class="lead-row" role="row"><span>Lead</span><span>Source</span><span>First reply</span><span>Status</span></div>
-              <div class="lead-row" role="row"><span class="who">Dana Ruiz</span><span>Google Ads</span><span class="mono">0:38</span><span class="st booked">Booked</span></div>
-              <div class="lead-row" role="row"><span class="who">Marcus Lee</span><span>Missed call</span><span class="mono">0:09</span><span class="st replied">Replied</span></div>
-              <div class="lead-row" role="row"><span class="who">Priya Shah</span><span>Website form</span><span class="mono">0:52</span><span class="st rebook">No-show · rebooking</span></div>
-            </div>
-          </div>
-        </div>
+      <div class="frame vid">
+        <video class="hero-vid" src="/assets/sellablecrm-intro.mp4" poster="/assets/sellablecrm-intro-poster.webp" width="1920" height="1080" autoplay muted loop playsinline preload="auto" aria-label="SellableCRM intro video"></video>
+        <button class="vid-sound" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound on</span></button>
       </div>
     </div>
-    <p class="example-note">Illustration with example data.</p>
   </div>
 </header>
 
@@ -1549,16 +1507,6 @@ footer { padding: 56px 0 40px; }
 (function () {
   var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-  /* Agency name: updates every branded spot on the page */
-  var input = document.getElementById('brandInput');
-  function setBrand() {
-    var v = (input.value || '').trim() || 'Your Agency';
-    document.querySelectorAll('[data-brand]').forEach(function (el) { el.textContent = v; });
-    document.querySelectorAll('[data-initial]').forEach(function (el) { el.textContent = v.charAt(0).toUpperCase(); });
-  }
-  input.addEventListener('input', setBrand);
-  setBrand();
-
   /* Scroll reveal (transform only) */
   if ('IntersectionObserver' in window && !reduce) {
     var io = new IntersectionObserver(function (entries) {
@@ -1640,6 +1588,19 @@ footer { padding: 56px 0 40px; }
         if (show) first = false;
       });
     });
+  });
+})();
+/* Hero video: sound toggle, and no autoplay when reduced motion is asked for */
+(function () {
+  var v = document.querySelector('.hero-vid'), b = document.querySelector('.vid-sound');
+  if (!v || !b) return;
+  if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; }
+  b.addEventListener('click', function () {
+    var on = v.muted;
+    v.muted = !on;
+    if (on) { v.play(); }
+    b.setAttribute('aria-pressed', on ? 'true' : 'false');
+    b.querySelector('span').textContent = on ? 'Sound off' : 'Sound on';
   });
 })();
 </script>
