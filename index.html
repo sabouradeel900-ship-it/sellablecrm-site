@@ -32,7 +32,9 @@
    "disambiguatingDescription": "SellableCRM (sellablecrm.com) is a white-label lead-to-close service for marketing agencies, built on HighLevel and run by its own team of specialists. It is not a standalone CRM software product.",
    "foundingDate": "2026-09",
    "sameAs": [
-    "https://www.linkedin.com/company/sellablecrm/"
+    "https://www.linkedin.com/company/sellablecrm/",
+    "https://www.facebook.com/sellablecrm",
+    "https://www.instagram.com/sellablecrm/"
    ],
    "founder": {
     "@type": "Person",
@@ -417,9 +419,17 @@ p { margin: 0; }
 .hero-vid { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: 18px; background: var(--night); object-fit: cover; }
 .vid-sound { position: absolute; right: 28px; bottom: 28px; display: inline-flex; align-items: center; gap: 8px; border: 0; cursor: pointer; background: rgba(10, 10, 11, .72); color: #fff; backdrop-filter: blur(8px); border-radius: 999px; padding: 9px 14px 9px 11px; font: 600 13px/1 var(--body); transition: background .2s; }
 .vid-sound:hover { background: rgba(10, 10, 11, .9); }
+.vid-play { position: absolute; left: 28px; bottom: 28px; width: 40px; height: 40px; border: 0; border-radius: 50%; display: grid; place-items: center; cursor: pointer; background: rgba(10, 10, 11, .72); color: #fff; backdrop-filter: blur(8px); opacity: 0; transition: opacity .25s, background .2s; }
+.vid-play svg { width: 18px; height: 18px; }
+.vid-play .i-play, .vid-play.paused .i-pause { display: none; }
+.vid-play.paused .i-play { display: block; }
+.frame.vid:hover .vid-play, .vid-play:focus-visible, .vid-play.paused { opacity: 1; }
+.vid-play:hover { background: rgba(10, 10, 11, .9); }
+@media (hover: none) { .vid-play { opacity: 1; } }
+.hero-ctas-m { display: none; }
 .vid-sound svg { width: 18px; height: 18px; }
 .vid-sound[aria-pressed="false"] .wave { opacity: .35; }
-@media (max-width: 600px) { .frame.vid { padding: 6px; border-radius: 20px; margin-bottom: 40px; } .hero-vid { border-radius: 14px; } .vid-sound { right: 12px; bottom: 12px; width: 34px; height: 34px; padding: 0; justify-content: center; } .vid-sound svg { width: 16px; height: 16px; } .vid-sound span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } }
+@media (max-width: 600px) { .frame.vid { padding: 6px; border-radius: 20px; margin-bottom: 40px; } .hero-vid { border-radius: 14px; } .vid-sound { right: 12px; bottom: 12px; width: 34px; height: 34px; padding: 0; justify-content: center; } .vid-sound svg { width: 16px; height: 16px; } .vid-sound span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); } .vid-play { left: 12px; bottom: 12px; width: 34px; height: 34px; } .vid-play svg { width: 15px; height: 15px; } .hero-copy .hero-ctas { display: none; } .hero-ctas-m { display: flex; margin: 0 0 48px; } .frame.vid { margin-bottom: 24px; } }
 .frame {
   position: relative; z-index: 1; background: var(--paper); border-radius: var(--r-lg) var(--r-lg) 0 0;
   border: 1px solid var(--line); border-bottom: 0; padding: 14px 14px 0;
@@ -848,6 +858,10 @@ p { margin: 0; }
 footer { padding: 56px 0 40px; }
 .foot { display: grid; grid-template-columns: 1.4fr repeat(4, 1fr); gap: 32px; }
 .foot p { color: var(--ink-3); font-size: 14px; max-width: 34ch; margin-top: 14px; }
+.social { display: flex; gap: 8px; margin-top: 18px; }
+.social a { width: 36px; height: 36px; border-radius: 50%; display: grid; place-items: center; color: var(--ink-2); background: var(--ground); transition: background .2s, color .2s; }
+.social a:hover { background: var(--ink); color: var(--lime); }
+.social svg { width: 17px; height: 17px; }
 .foot h6 { margin: 0 0 12px; font-size: 13px; font-weight: 500; color: var(--ink-3); }
 .foot ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 14px; }
 .foot ul a:hover { text-decoration: underline; }
@@ -1006,9 +1020,15 @@ footer { padding: 56px 0 40px; }
     <div class="stage">
       <div class="frame vid">
         <video class="hero-vid" src="/assets/sellablecrm-intro.mp4" poster="/assets/sellablecrm-intro-poster.webp" width="1920" height="1080" autoplay muted loop playsinline preload="auto" aria-label="SellableCRM intro video"></video>
+        <button class="vid-play" type="button" aria-label="Pause video"><svg viewBox="0 0 24 24" aria-hidden="true"><path class="i-pause" fill="currentColor" d="M7 5h3.5v14H7zM13.5 5H17v14h-3.5z"/><path class="i-play" fill="currentColor" d="M8 5.5v13L18.5 12z"/></svg></button>
         <button class="vid-sound" type="button" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9v6h4l5 4V5L8 9H4z" fill="currentColor"/><path class="wave" d="M16 8.5a5 5 0 0 1 0 7M18.5 6a8.5 8.5 0 0 1 0 12" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span>Sound on</span></button>
       </div>
     </div>
+
+    <div class="hero-ctas hero-ctas-m">
+        <a class="btn" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a demo</a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
   </div>
 </header>
 
@@ -1493,6 +1513,11 @@ footer { padding: 56px 0 40px; }
       <div>
         <a class="brand" href="#top" aria-label="SellableCRM home"><span class="logo-pri"></span></a>
         <p>White-label lead-to-close for marketing agencies.</p>
+        <div class="social" aria-label="SellableCRM on social media">
+          <a href="https://www.facebook.com/sellablecrm" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-7.5h2.6l.4-3h-3V8.6c0-.9.3-1.5 1.5-1.5h1.6V4.4c-.3 0-1.2-.1-2.3-.1-2.3 0-3.8 1.4-3.8 3.9v2.3H7.9v3h2.6V21h3z"/></svg></a>
+          <a href="https://www.instagram.com/sellablecrm/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor"/></svg></a>
+          <a href="https://www.linkedin.com/company/sellablecrm" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M5.2 8.8h3.1V19H5.2V8.8zM6.8 4a1.8 1.8 0 1 1 0 3.6 1.8 1.8 0 0 1 0-3.6zM10.3 8.8h3v1.4h.1c.4-.8 1.4-1.7 3-1.7 3.2 0 3.8 2.1 3.8 4.8V19h-3.1v-5c0-1.2 0-2.7-1.7-2.7s-1.9 1.3-1.9 2.6V19h-3.1V8.8z"/></svg></a>
+        </div>
       </div>
       <div><h6>Service</h6><ul><li><a href="/whats-included/">What's included</a></li><li><a href="/how-it-works/">How it works</a></li><li><a href="/pricing/">Pricing</a></li><li><a href="/ghl-specialist/">Our specialists</a></li></ul></div>
       <div><h6>Company</h6><ul><li><a href="/about/">About</a></li><li><a href="#faq">FAQ</a></li><li><a href="/book/">Book a demo</a></li></ul></div>
@@ -1595,6 +1620,12 @@ footer { padding: 56px 0 40px; }
   var v = document.querySelector('.hero-vid'), b = document.querySelector('.vid-sound');
   if (!v || !b) return;
   if (window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches) { v.removeAttribute('autoplay'); v.pause(); v.controls = true; }
+  var p = document.querySelector('.vid-play');
+  function setPlay() { var paused = v.paused; p.classList.toggle('paused', paused); p.setAttribute('aria-label', paused ? 'Play video' : 'Pause video'); }
+  if (p) {
+    p.addEventListener('click', function () { if (v.paused) { v.play(); } else { v.pause(); } });
+    v.addEventListener('play', setPlay); v.addEventListener('pause', setPlay); setPlay();
+  }
   b.addEventListener('click', function () {
     var on = v.muted;
     v.muted = !on;
