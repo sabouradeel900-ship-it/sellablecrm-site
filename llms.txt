@@ -28,7 +28,7 @@ About 40 minutes of the agency's time per client.
 
 ## Pricing (US dollars)
 - $175 a month per live client. Billing begins when the client's first channel goes live.
-- $300 one-time setup per client, charged when the client is confirmed.
+- $300 one-time setup per client, charged when the client is confirmed. It includes 3 hours of customization for that client’s account.
 - Usage (texts, calls and email) passed through from the second invoice, itemized per client, typically $15–30 a month.
 - Custom work at $40 an hour, quoted in advance.
 - No charge while a client is paused. Cancel any time from the hub.
