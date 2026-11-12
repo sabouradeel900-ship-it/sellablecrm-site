@@ -758,6 +758,24 @@ p { margin: 0; }
 .promise i svg { width: 18px; height: 18px; }
 .promise b { font: 500 19px/1.25 var(--display); letter-spacing: -.015em; }
 .promise p { color: var(--ink-2); font-size: 14.5px; }
+/* Homepage team section: who does what at a glance */
+.crew-us { background: var(--ground); border-radius: 26px; padding: 28px; display: grid; grid-template-columns: 1.9fr 1fr; gap: 28px; }
+.crew-label { display: block; font: 500 11.5px/1 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
+.crew-grid { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+.crew-grid li { display: flex; align-items: center; gap: 12px; background: var(--paper); border-radius: 16px; padding: 12px 14px; font: 500 16.5px/1.25 var(--display); letter-spacing: -.01em; }
+.crew-grid i { flex: none; width: 38px; height: 38px; border-radius: 11px; background: var(--iri); color: var(--lime-ink); display: grid; place-items: center; }
+.crew-grid i svg { width: 17px; height: 17px; }
+.crew-you { border-left: 1px solid var(--line); padding-left: 28px; }
+.crew-you div { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.crew-you span { background: var(--paper); border: 1px solid var(--line); border-radius: 999px; padding: 7px 12px; font-size: 13.5px; font-weight: 500; }
+.assure { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 28px; }
+.assure span { display: inline-flex; align-items: center; gap: 10px; border: 1px solid var(--line); border-radius: 999px; padding: 7px 18px 7px 7px; font: 500 16px/1.2 var(--display); letter-spacing: -.01em; }
+.assure i { flex: none; width: 32px; height: 32px; border-radius: 50%; background: var(--ink); color: var(--lime); display: grid; place-items: center; }
+.assure i svg { width: 15px; height: 15px; }
+@media (max-width: 1100px) { .crew-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 900px) { .crew-us { grid-template-columns: 1fr; } .crew-you { border-left: 0; padding-left: 0; border-top: 1px solid var(--line); padding-top: 18px; } }
+@media (max-width: 600px) { .crew-us { padding: 18px; border-radius: 22px; } .crew-grid li { font-size: 15px; padding: 10px 12px; gap: 10px; } .crew-grid i { width: 32px; height: 32px; } .assure { flex-direction: column; align-items: stretch; } .assure span { font-size: 15px; } }
+@media (max-width: 480px) { .crew-grid { grid-template-columns: 1fr; } }
 @media (max-width: 860px) { .promises { grid-template-columns: 1fr; } }
 
 /* ---------- Team section (homepage and What's included) ---------- */
@@ -1349,70 +1367,36 @@ footer { padding: 56px 0 40px; }
   <div class="wrap">
     <div class="wi-head">
       <h2 class="rv">A dedicated team behind every client</h2>
-      <p class="rv" style="--d:.08s">Specialists who set up, watch and maintain each client's lead-to-close system. <span class="mark">You never become the support desk.</span></p>
+      <p class="rv" style="--d:.08s">Specialists run each client's system. <span class="mark">You never become the support desk.</span></p>
     </div>
-    <div class="team">
-      <ul class="team-list">
-        <li class="rv"><i><svg><use href="#check"/></svg></i><div><b>Setup and testing</b><span>Every account built and tested before go-live.</span></div></li>
-        <li class="rv" style="--d:.05s"><i><svg><use href="#phone"/></svg></i><div><b>Texting approval</b><span>We register it and fix anything carriers ask for.</span></div></li>
-        <li class="rv" style="--d:.1s"><i><svg><use href="#bell"/></svg></i><div><b>Account checks</b><span>If a lead source goes quiet, we look into it.</span></div></li>
-        <li class="rv" style="--d:.15s"><i><svg><use href="#bolt"/></svg></i><div><b>Fixes and updates</b><span>Improvements reach every client at once.</span></div></li>
-        <li class="rv" style="--d:.2s"><i><svg><use href="#doc"/></svg></i><div><b>Your change requests</b><span>Hours, sources and alerts, changed for you.</span></div></li>
-        <li class="rv" style="--d:.25s"><i><svg><use href="#chat"/></svg></i><div><b>Tickets in 4 business hours</b><span>Monday to Friday, 9am to 6pm Eastern.</span></div></li>
-      </ul>
-      <figure class="ticket rv" style="--d:.1s" data-ui>
-        <div class="ticket-head"><div><b>Change request</b><small>Northside Plumbing</small></div><span class="st booked">Resolved</span></div>
-        <div class="tmsg you"><small>You · 10:02</small><p>Can Northside's texts start at 8am instead of 9am?</p></div>
-        <div class="tmsg ours"><small>Our team · 11:14</small><p>Done. Texts for Northside now go out from 8am, and we checked tomorrow's reminders too.</p></div>
-        <figcaption>Example ticket</figcaption>
-      </figure>
+    <div class="crew">
+      <div class="crew-us rv">
+        <div class="crew-ours">
+        <small class="crew-label">Our team handles</small>
+        <ul class="crew-grid">
+          <li><i><svg><use href="#check"/></svg></i>Setup and testing</li>
+          <li><i><svg><use href="#phone"/></svg></i>Texting approval</li>
+          <li><i><svg><use href="#bell"/></svg></i>Account checks</li>
+          <li><i><svg><use href="#bolt"/></svg></i>Fixes and updates</li>
+          <li><i><svg><use href="#doc"/></svg></i>Change requests</li>
+          <li><i><svg><use href="#chat"/></svg></i>4-hour replies</li>
+        </ul>
+        </div>
+        <div class="crew-you">
+          <small class="crew-label">Your part</small>
+          <div><span>10-min form</span><span>30-min call</span><span>Lead sources</span><span>Email records</span><span>SMS details</span></div>
+        </div>
+      </div>
     </div>
-    <div class="yourpart rv">
-      <b>Your part</b>
-      <span>10-minute form</span><span>30-minute setup call</span><span>Connect lead sources</span><span>Email records</span><span>Your client's SMS details</span>
-    </div>
-    <div class="promises">
-      <div class="promise rv"><i><svg><use href="#tagi"/></svg></i><b>Your brand only</b><p>Your client sees your name, never ours, on every text, login and report.</p></div>
-      <div class="promise rv" style="--d:.06s"><i><svg><use href="#hand"/></svg></i><b>Your client relationship</b><p>You stay the point of contact. <span class="mark">We never contact your clients.</span></p></div>
-      <div class="promise rv" style="--d:.12s"><i><svg><use href="#pause"/></svg></i><b>Pause any client, any time</b><p>Paused clients aren't billed, and their leads aren't followed up.</p></div>
+    <div class="assure rv">
+      <span><i><svg><use href="#tagi"/></svg></i>Your brand only</span>
+      <span><i><svg><use href="#hand"/></svg></i>We never contact your clients</span>
+      <span><i><svg><use href="#pause"/></svg></i>Pause any client, any time</span>
     </div>
     <div class="cta-row rv">
       <a class="btn" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a demo</a>
       <a class="btn ghost" href="/pricing/">See pricing</a>
     </div>
-  </div>
-</section>
-
-<!-- COST: hire locally vs contractors vs SellableCRM -->
-<section class="cost-cmp" id="cost" style="padding-top:120px">
-  <div class="wrap">
-    <div class="wi-head">
-      <h2>A whole team for <span class="iri-text">less than one hire</span></h2>
-      <p>What it costs each month to run lead-to-close for five clients.</p>
-    </div>
-    <div class="cc-grid">
-      <div class="cc cc-x">
-        <small>Hire locally</small>
-        <b>~$5,500<span>/month</span></b>
-        <p>One CRM specialist's base salary, at the US average of $66,146 a year.</p>
-        <ul><li><svg><use href="#xmark"/></svg>Plus payroll taxes and benefits</li><li><svg><use href="#xmark"/></svg>Plus software to buy and learn</li><li><svg><use href="#xmark"/></svg>Plus your time managing them</li></ul>
-      </div>
-      <div class="cc cc-x">
-        <small>Hire contractors or freelancers</small>
-        <b>$10–100<span>/hour</span></b>
-        <p>Typical rates in HighLevel job posts. Every build, fix and change is billed time.</p>
-        <ul><li><svg><use href="#xmark"/></svg>Plus software you pay for</li><li><svg><use href="#xmark"/></svg>Support stops when the project ends</li><li><svg><use href="#xmark"/></svg>Your clients wait on one person</li></ul>
-      </div>
-      <div class="cc cc-us">
-        <span class="cc-badge">No hiring, no managing</span>
-        <small>SellableCRM</small>
-        <b>$875<span>/month</span></b>
-        <p>Five live clients at $175 each. First month with the $300 setup per client: $2,375. Usage is extra, typically $15–30 per client a month.</p>
-        <ul><li><svg><use href="#check"/></svg>A dedicated team, setup and testing</li><li><svg><use href="#check"/></svg>Texting approval and support included</li><li><svg><use href="#check"/></svg>No hiring, no managing, no training</li></ul>
-        <a class="btn lime" href="/book/"><span class="ico"><svg><use href="#arrow"/></svg><svg><use href="#arrow"/></svg></span>Book a demo</a>
-      </div>
-    </div>
-    <p class="cc-src">Example for five clients. Local hire: PayScale, average US CRM specialist base salary, 2026. Contractors: HighLevel job posts on Upwork, November 2026. Your costs will differ.</p>
   </div>
 </section>
 
